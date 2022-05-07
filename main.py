@@ -143,6 +143,7 @@ def mine_pdf_update_widget(text_box, file_path, keywords):
     s += "\n\n"
     for k, pages in kp.items():
         s += k + ": " + ",".join(map(lambda p: str(p), pages)) + "\n"
+    text_box.delete('1.0', tk.END)
     text_box.insert(tk.END, s)
 
 
